@@ -1,0 +1,26 @@
+{
+    "home": {
+        "hero": {
+            "badge": "Más de 10,000 viajeros satisfechos",
+            "headline": "Descubre la magia de",
+            "headlineHighlight": "Perú",
+            "subheadline": "Experiencias auténticas con guías locales expertos",
+            "ctaPrimary": "Ver Tours",
+            "ctaSecondary": "Contactar",
+            "stat1": "Viajeros",
+            "stat2": "Destinos",
+            "stat3": "Calificación"
+        }
+    },
+    "booking": {
+        "title": "Reserva tu Aventura",
+        "name": "Nombre Completo",
+        "email": "Correo Electrónico",
+        "phone": "Teléfono",
+        "country": "País",
+        "date": "Fecha de Viaje",
+        "people": "Personas",
+        "notes": "Notas Adicionales",
+        "submit": "Enviar Reserva"
+    }
+}
