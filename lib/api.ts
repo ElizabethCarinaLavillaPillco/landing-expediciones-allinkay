@@ -56,16 +56,19 @@ export function getImageUrl(path: string | null | undefined): string {
         return 'https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
     }
 
-    // If it's already a full URL, return as-is
-    if (path.startsWith('http://') || path.startsWith('https://')) {
+    // URL completa = devolver tal cual
+    if (path.startsWith('http')) {
         return path;
     }
 
-    // If it's a direct public image path (like /images/...), return it without /storage/
+    // ✅ IMÁGENES ESTÁTICAS DEL FRONTEND (Vercel)
+    // Ej: /images/codigo-esnna.jpg → https://www.expedicionesallinkay.com/images/codigo-esnna.jpg
     if (path.startsWith('/images/')) {
-        return `${API_BASE_URL.replace('/api', '')}${path}`;
+        // Usa la URL del frontend (sitio web), no de la API
+        return `https://www.expedicionesallinkay.com${path}`;
     }
 
-    // Otherwise, prepend the API base URL and /storage/
-    return `${API_BASE_URL.replace('/api', '')}/storage/${path}`;
+    // ✅ IMÁGENES DINÁMICAS DE LA API (Hostinger/Laravel)
+    // Ej: tours/01KK0S50Q4YQ3MZ3SQZ24Y4JKY.webp → https://api.expedicionesallinkay.com/storage/tours/...
+    return `https://api.expedicionesallinkay.com/storage/${path}`;
 }
