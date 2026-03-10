@@ -10,12 +10,20 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'api.travelagency.com',
+        hostname: 'api.expedicionesallinkay.com',
       },
       {
         protocol: 'http',
         hostname: 'localhost',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'otra-web-de-fotos.com',
+      }
     ],
   },
 
